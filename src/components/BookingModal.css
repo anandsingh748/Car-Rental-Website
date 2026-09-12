@@ -1,0 +1,440 @@
+.booking-modal {
+  max-width: 900px;
+  padding: 2.25rem;
+}
+
+/* Progress indicator */
+.booking-progress-wrapper {
+  margin-bottom: 2rem;
+}
+
+.progress-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto 0.5rem;
+  position: relative;
+}
+
+.step-indicator {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 2;
+  transition: var(--transition-smooth);
+}
+
+.step-indicator.active {
+  background: var(--bg-base);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold-glow);
+}
+
+.step-indicator.completed {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #070B13;
+}
+
+.progress-line {
+  flex-grow: 1;
+  height: 2px;
+  background: var(--border-subtle);
+  margin: 0 0.5rem;
+  z-index: 1;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  max-width: 440px;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 0.5rem;
+}
+
+/* Two columns */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+}
+
+.booking-form-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-step-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.booking-step-form h3 {
+  font-size: 1.35rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.5rem;
+}
+
+.step-description {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: -0.75rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.contact-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+}
+
+.contact-details-section h4 {
+  font-size: 0.95rem;
+}
+
+.help-text {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
+
+/* Step 2 uploads */
+.document-upload-mock {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: 2px dashed rgba(245, 158, 11, 0.25);
+  border-radius: 12px;
+  margin: 0.5rem 0;
+}
+
+.upload-icon {
+  color: var(--accent-gold);
+}
+
+.upload-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.upload-text strong {
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+}
+
+.upload-text span {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.security-notice-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn-next-step {
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+/* Step 3 Payments */
+.payment-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.payment-opt-btn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text-secondary);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+}
+
+.payment-opt-btn.active {
+  border-color: var(--accent-gold);
+  background: var(--accent-gold-glow);
+  color: var(--color-text-primary);
+  box-shadow: 0 0 12px var(--accent-gold-glow);
+}
+
+.upi-payment-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.qr-code-mock {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-svg {
+  fill: #000;
+}
+
+.upi-instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.upi-instructions p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.upi-id-label {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+}
+
+.pay-amount-badge {
+  background: var(--accent-gold-gradient);
+  color: #070B13;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  align-self: flex-start;
+}
+
+.card-payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-pay-now {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+}
+
+/* Step 4 Success */
+.booking-success-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.success-icon-wrapper {
+  background: rgba(16, 185, 129, 0.1);
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.success-icon {
+  color: var(--color-success);
+}
+
+.booking-success-view h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.booking-summary-receipt {
+  width: 100%;
+  max-width: 440px;
+  padding: 1.25rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.receipt-row span {
+  color: var(--color-text-secondary);
+}
+
+.green-text {
+  color: var(--color-success);
+}
+
+.success-small-text {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  max-width: 440px;
+}
+
+.btn-done {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 1rem;
+}
+
+/* Right Summary Panel */
+.booking-summary-panel {
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-self: flex-start;
+  position: sticky;
+  top: 0;
+}
+
+.summary-car-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.summary-car-img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-card);
+}
+
+.summary-car-brand {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.summary-car-details h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.summary-car-cat {
+  font-size: 0.7rem;
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pricing-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.pricing-breakdown h4 {
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.divider-line {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 0.5rem 0;
+}
+
+.total-row {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  align-items: center;
+}
+
+.grand-total-amount {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+
+.refund-deposit-note {
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* Responsiveness */
+@media (max-width: 800px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-summary-panel {
+    position: static;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

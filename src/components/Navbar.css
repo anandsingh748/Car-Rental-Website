@@ -1,0 +1,178 @@
+.navbar {
+  position: sticky;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  margin: 1rem auto 0;
+  max-width: 1200px;
+  width: calc(100% - 2rem);
+  z-index: 100;
+  border-radius: 16px;
+  padding: 0.5rem 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.logo-icon-wrapper {
+  background: var(--accent-gold-gradient);
+  padding: 0.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px var(--accent-gold-glow);
+}
+
+.logo-icon {
+  color: #070B13;
+  width: 20px;
+  height: 20px;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.gold-text {
+  color: var(--accent-gold);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar-item {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: var(--transition-smooth);
+}
+
+.navbar-item:hover {
+  color: var(--color-text-primary);
+}
+
+.navbar-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: var(--transition-smooth);
+  box-shadow: 0 0 8px var(--accent-gold);
+}
+
+.navbar-item.active {
+  color: var(--color-text-primary);
+}
+
+.navbar-item.active::after {
+  width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.role-selector-wrapper {
+  position: relative;
+}
+
+.role-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-card);
+  color: var(--color-text-primary);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.role-select:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-text-secondary);
+}
+
+.role-select option {
+  background: var(--bg-surface-elevated);
+  color: var(--color-text-primary);
+}
+
+.user-profile-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--border-card);
+}
+
+.avatar {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-gold);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.profile-role {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* In production/polish we could build a mobile menu, but for now we keep it simple */
+  }
+  
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .user-profile-badge {
+    display: none;
+  }
+}
